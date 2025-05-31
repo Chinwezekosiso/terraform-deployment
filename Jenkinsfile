@@ -16,7 +16,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 dir('main') {
-                    withAWS(credentials: 'access-key') {
+                    withAWS(credentials: 'my-cba-aws-credential') {
                         sh 'terraform init'
                     }
                 }
